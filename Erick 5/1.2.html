@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML con Diversos Elementos Multimedia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .marquee p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .color-text {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .color-text.red {
+            color: red;
+        }
+        .color-text.blue {
+            color: blue;
+        }
+        .color-text.green {
+            color: green;
+        }
+        .media-container {
+            margin-bottom: 20px;
+        }
+        .gif-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Página HTML con Diversos Elementos Multimedia</h1>
+
+    <section>
+        <h2>Marquesina</h2>
+        <div class="marquee">
+            <p>Trabajo de erick que se manda antes de las 12 3ra pagina</p>
+        </div>
+        <p>La marquesina crea un efecto de texto en movimiento horizontal. Esto se logra usando CSS para animar el texto en el contenedor.</p>
+    </section>
+
+    <section>
+        <h2>Imágenes</h2>
+        <img src="https://via.placeholder.com/600x400" alt="Imagen de ejemplo" width="600" height="400">
+        <p>Las imágenes se añaden con la etiqueta <code>&lt;img&gt;</code>. Se debe definir el atributo <code>src</code> con la URL de la imagen y <code>alt</code> para proporcionar una descripción alternativa.</p>
+    </section>
+
+    <section class="media-container">
+        <h2>Video</h2>
+        <video width="600" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <p>Para insertar videos, se usa la etiqueta <code>&lt;video&gt;</code>. El atributo <code>controls</code> agrega controles de reproducción al video, y <code>source</code> especifica el archivo y su tipo.</p>
+    </section>
+
+    <section class="media-container">
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta de audio.
+        </audio>
+        <p>El audio se incluye con la etiqueta <code>&lt;audio&gt;</code>. El atributo <code>controls</code> permite la reproducción, pausa y ajuste del volumen del audio. El atributo <code>source</code> define el archivo de audio y su tipo.</p>
+    </section>
+
+    <section class="gif-container">
+        <h2>GIF</h2>
+        <img src="https://media.giphy.com/media/3o6Zt9xFvfKpX4Q8x6/giphy.gif" alt="GIF de ejemplo">
+        <p>Los GIFs se insertan de manera similar a las imágenes, usando la etiqueta <code>&lt;img&gt;</code>. Los GIFs son útiles para animaciones cortas y contenido visual dinámico.</p>
+    </section>
+
+    <div class="page-break"></div> <!-- Salto de página -->
+</body>
+</html>
